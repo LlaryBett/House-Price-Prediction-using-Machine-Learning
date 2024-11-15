@@ -114,7 +114,7 @@ for col in object_cols:
 ### Output :
 ![Correlation Heatmap](screenshots/6.png)
 
-### Data Cleaning
+### 4.Data Cleaning
 
 Data cleaning is the process of improving the dataset by removing incorrect, corrupted, or irrelevant data. In our dataset, some columns are not essential for model training. Therefore, we can drop these columns before proceeding with training.
 
@@ -163,7 +163,7 @@ After dropping rows with null values, it's important to confirm that no features
    ```python
    new_dataset.isnull().sum()
 ```
-### OneHotEncoder – For Label Categorical Features
+### 5.OneHotEncoder – For Label Categorical Features
 
 OneHotEncoding is an effective method for converting categorical data into binary vectors, which can then be used in machine learning models. It transforms the categorical labels into a format that can be easily interpreted by algorithms.
 
@@ -197,7 +197,7 @@ After identifying the categorical features, we can apply OneHotEncoding to conve
    OH_encoder = OneHotEncoder(sparse=False, handle_unknown='ignore')
 
 ```
-### Splitting the Dataset into Training and Testing Sets
+### 6. Splitting the Dataset into Training and Testing Sets
 
 In machine learning, splitting the dataset into training and testing sets is crucial for evaluating the model’s performance. In this step, we separate the target variable (`SalePrice`) from the features and then divide the data into training and validation sets.
 
